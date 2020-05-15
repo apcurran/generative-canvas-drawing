@@ -7,7 +7,7 @@ const ctx = canvas.getContext("2d");
 canvas.width = document.documentElement.clientWidth;
 canvas.height = document.documentElement.clientHeight;
 
-const edge = 70; // Distance around a radius for particles to randomly move.
+const edge = 100; // Distance around a radius for particles to randomly move.
 let drawing = false;
 
 const mouse = {
@@ -50,7 +50,7 @@ class Root {
             ctx.arc(this.x, this.y, radius, 0, 2 * Math.PI, false);
             ctx.fillStyle = this.color;
             ctx.fill();
-            ctx.strokeStyle = "gold";
+            ctx.strokeStyle = "lightblue";
             ctx.stroke();
         }
     }
@@ -82,5 +82,4 @@ window.addEventListener("mousemove", () => {
 });
 
 window.addEventListener("mousedown", () => drawing = true);
-
 window.addEventListener("mouseup", () => drawing = false);
